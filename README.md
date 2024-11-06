@@ -1,1 +1,1 @@
-# hito2React
+DEPLOY: https://hito2-react.vercel.app/
