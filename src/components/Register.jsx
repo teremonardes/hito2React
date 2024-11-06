@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './Register.css'
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('')
@@ -38,7 +39,7 @@ const RegisterPage = () => {
 
   return (
     <>
-      <h1>Formulario de Registro</h1>
+      <h1 className='m-3'>Formulario de Registro</h1>
       <form onSubmit={ValidarInputs}>
         {empty
           ? <p className='error'>Todos los campos son obligatorios</p>
@@ -56,28 +57,28 @@ const RegisterPage = () => {
         <div className='form-group'>
           <input
             type='text'
-            className='form-control' name='Email'
+            className='form-control mb-3' name='Email'
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder='Ingresa tu email'
           />
           <input
             type='password'
-            className='form-control' name='Pass'
+            className='form-control mb-3' name='Pass'
             onChange={(e) => setPass(e.target.value)}
             value={pass}
             placeholder='Ingresa tu contraseña'
           />
           <input
             type='password'
-            className='form-control' name='PassConfirm'
+            className='form-control mb-3' name='PassConfirm'
             onChange={(e) => setPassConfirm(e.target.value)}
             value={passConfirm}
             placeholder='Confirma tu contraseña'
           />
         </div>
-        <button className='btn btn-dark mt-3' type='submit'>
-          Enviar
+        <button className='btn btn-dark mt-3 mb-3' type='submit'>
+          Registrarme
         </button>
       </form>
     </>

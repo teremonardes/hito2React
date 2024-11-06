@@ -3,7 +3,8 @@ import Footer from './components/Footer'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar'
-import RegisterPage from './components/RegisterPage'
+import RegisterPage from './components/Register'
+import LoginPage from './components/Login'
 
 function App () {
   return (
@@ -11,6 +12,7 @@ function App () {
       <Navbar />
       {/* <Home></Home> */}
       <RegisterPage />
+      <LoginPage />
       <Footer />
 
     </>
