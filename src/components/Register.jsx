@@ -8,7 +8,7 @@ const RegisterPage = () => {
   const [empty, setEmpty] = useState(false)
   const [length, setLenght] = useState(false)
   const [same, setSame] = useState(false)
-  const [success, SetSuccess] = useState(false)
+  const [success, setSuccess] = useState(false)
   // const [state, setState] = useState(valor_inicial);
 
   const ValidarInputs = (e) => {
@@ -17,7 +17,7 @@ const RegisterPage = () => {
     setEmpty(false)
     setLenght(false)
     setSame(false)
-    SetSuccess(false)
+    setSuccess(false)
 
     if (!email.trim() || !pass.trim() || !passConfirm.trim()) {
       setEmpty(true)
@@ -31,7 +31,7 @@ const RegisterPage = () => {
       setSame(true)
       return
     }
-    SetSuccess(true)
+    setSuccess(true)
     setEmail('')
     setPass('')
     setPassConfirm('')
@@ -56,7 +56,7 @@ const RegisterPage = () => {
 
         <div className='form-group'>
           <input
-            type='text'
+            type='email'
             className='form-control mb-3' name='Email'
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -77,7 +77,7 @@ const RegisterPage = () => {
             placeholder='Confirma tu contraseña'
           />
         </div>
-        <button className='btn btn-dark mt-3 mb-3' type='submit'>
+        <button className='btn btn-dark mt-3 mb-5' type='submit'>
           Registrarme
         </button>
       </form>

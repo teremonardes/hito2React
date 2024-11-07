@@ -6,7 +6,7 @@ const LoginPage = () => {
   const [pass, setPass] = useState('')
   const [empty, setEmpty] = useState(false)
   const [length, setLenght] = useState(false)
-  const [success, SetSuccess] = useState(false)
+  const [success, setSuccess] = useState(false)
   // const [state, setState] = useState(valor_inicial);
 
   const ValidarInputs = (e) => {
@@ -14,7 +14,7 @@ const LoginPage = () => {
 
     setEmpty(false)
     setLenght(false)
-    SetSuccess(false)
+    setSuccess(false)
 
     if (!email.trim() || !pass.trim()) {
       setEmpty(true)
@@ -25,7 +25,7 @@ const LoginPage = () => {
       return
     }
 
-    SetSuccess(true)
+    setSuccess(true)
     setEmail('')
     setPass('')
   }
@@ -47,7 +47,7 @@ const LoginPage = () => {
 
         <div className='form-group'>
           <input
-            type='text'
+            type='email'
             className='form-control mb-3' name='Email'
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -62,7 +62,7 @@ const LoginPage = () => {
           />
 
         </div>
-        <button className='btn btn-dark mt-3 mb-3' type='submit'>
+        <button className='btn btn-dark mt-3 mb-5' type='submit'>
           Acceder
         </button>
       </form>
